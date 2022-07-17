@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #454853;
+}
+
+ul {
+  position: absolute;
+
+  transform: skewY(-15deg);
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  background: #363942;
+  padding: 15px;
+  z-index: var(--i);
+  transition: 0.5s;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #1f2125;
+  transform-origin: right;
+  transform: skewY(45deg);
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  height: 40px;
+  left: 0;
+  background: #2c3136;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+}
+
+ul li:nth-child(1)::after {
+  box-shadow: -375px 375px 30px rgba(45, 50, 59, 0.425);
+}
+
+ul li:nth-child(2)::after {
+  box-shadow: -320px 320px 30px rgba(45, 50, 59, 0.425);
+}
+
+ul li:nth-child(3)::after {
+  box-shadow: -270px 270px 30px rgba(45, 50, 59, 0.486);
+}
+
+ul li:nth-child(4)::after {
+  box-shadow: -220px 220px 27px rgba(45, 50, 59, 0.507);
+}
+
+ul li:nth-child(5)::after {
+  box-shadow: -170px 170px 25px rgba(45, 50, 59, 0.527);
+}
+
+ul li:last-child::after {
+  box-shadow: -115px 115px 20px rgba(45, 50, 59, 0.596);
+}
+
+ul li:hover {
+  background: #0076fd;
+  transform: translateX(50px);
+}
+ul li:hover::before {
+  background: #03346d;
+}
+ul li:hover::after {
+  background: #0059be;
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(160, 168, 177);
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.3s;
+}
+
+ul li:hover a {
+  color: rgb(250, 250, 250);
+}
